@@ -17,6 +17,8 @@
 #ifndef INCLUDE_PERFETTO_TRACING_TRACED_VALUE_FORWARD_H_
 #define INCLUDE_PERFETTO_TRACING_TRACED_VALUE_FORWARD_H_
 
+#include "base/base_export.h"
+
 namespace perfetto {
 
 class TracedValue;
@@ -26,7 +28,7 @@ template <typename MessageType>
 class TracedProto;
 
 template <typename T>
-void WriteIntoTracedValue(TracedValue context, T&& value);
+BASE_EXPORT void WriteIntoTracedValue(TracedValue context, T&& value);
 template <typename MessageType, typename T>
 void WriteIntoTracedProto(TracedProto<MessageType> context, T&& value);
 
