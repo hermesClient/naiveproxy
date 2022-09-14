@@ -13,10 +13,8 @@ if [ "$1" = debug ]; then
 else
   out=out/Release
   flags="
-    is_official_build=true
-    exclude_unwind_tables=true
-    enable_resource_allowlist_generation=false
-    symbol_level=2"
+    is_debug=true
+    is_component_build=true"
 fi
 
 . ./get-sysroot.sh
